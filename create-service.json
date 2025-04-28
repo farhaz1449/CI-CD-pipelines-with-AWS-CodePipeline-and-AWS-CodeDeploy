@@ -1,0 +1,29 @@
+{
+  "taskDefinition": "myrepo-task:1",
+  "cluster": "webapp-cluster",
+  "loadBalancers": [
+      {
+          "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:123725129624:targetgroup/target-group-1/6e677f1b9019421b",
+          "containerName": "myrepo-container",
+          "containerPort": 80
+      }
+  ],
+  "desiredCount": 1,
+  "launchType": "FARGATE",
+  "schedulingStrategy": "REPLICA",
+  "deploymentController": {
+      "type": "CODE_DEPLOY"
+  },
+  "networkConfiguration": {
+      "awsvpcConfiguration": {
+          "subnets": [
+              "subnet-0660e53297f7101ce",
+              "subnet-0369da672e5a089b3"
+          ],
+          "securityGroups": [
+              "sg-059ea2fe8d4bc65af"
+          ],
+          "assignPublicIp": "ENABLED"
+      }
+  }
+}
