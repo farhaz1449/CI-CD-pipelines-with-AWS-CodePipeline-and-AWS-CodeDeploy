@@ -1,0 +1,6 @@
+[
+  {
+    "name": "myrepo-container",
+    "imageUri": "067856596210.dkr.ecr.us-east-1.amazonaws.com/myrepo-container:latest"
+  }
+]
