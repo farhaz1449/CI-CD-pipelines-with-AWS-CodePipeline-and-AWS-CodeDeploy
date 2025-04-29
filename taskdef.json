@@ -1,25 +1,25 @@
 {
-    "family": "myrepo-task",
-    "executionRoleArn": "arn:aws:iam::975050030406:role/ecsTaskExecutionRole",
-    "networkMode": "awsvpc",
-    "containerDefinitions": [
-      {
-        "name": "myrepo-container",
-        "image": "<IMAGE1_NAME>",
-        "essential": true,
-        "portMappings": [
-          {
-            "containerPort": 80,
-            "hostPort": 80,
-            "protocol": "tcp"
-          }
-        ]
-      }
-    ],
-    "requiresCompatibilities": [
-      "FARGATE"
-    ],
-    "cpu": "256",
-    "memory": "512"
-  }
-  
+  "family": "myrepo-task",
+  "executionRoleArn": "arn:aws:iam::067856596210:role/service-role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "myrepo-container",
+      "image": "<IMAGE1_NAME>",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "256",
+  "memory": "512",
+  "taskRoleArn": "arn:aws:iam::067856596210:role/service-role/appTaskRole"
+}
